@@ -16,16 +16,14 @@ public class Categoria {
 	@GeneratedValue(strategy = GenerationType.IDENTITY) //Autoincremento
 	private long id;
 	
-	@NotNull(message = "O atributo título é obrigatório!")
-	@Size(min = 5, max = 255, message = "O atributo titulo deve conter no mínimo 5 e no máximo 255 caracteres.")
+	@NotNull(message = "O atributo categoria é obrigatório!")
+	@Size(min = 5, max = 255, message = "O atributo categoria deve conter no mínimo 5 e no máximo 255 caracteres.")
 	private String categoria; //equivalente ao titulo varchar
 	
-	@NotNull(message = "O atributo título é obrigatório!")
-	@Size(min = 5, max = 255, message = "O atributo titulo deve conter no mínimo 5 e no máximo 255 caracteres.")
+	@NotNull(message = "O atributo descricao é obrigatório!")
+	@Size(min = 5, max = 255, message = "O atributo descricao deve conter no mínimo 5 e no máximo 255 caracteres.")
 	private String descricao; //equivalente ao titulo varchar
 	
-	@NotNull(message = "O atributo título é obrigatório!")
-	@Size(min = 5, max = 255, message = "O atributo titulo deve conter no mínimo 5 e no máximo 255 caracteres.")
 	private String palavra_chave; //equivalente ao titulo varchar
 	
 	/*@OneToMany
