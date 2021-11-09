@@ -1,5 +1,6 @@
 package br.org.generation.ecommerce.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -24,7 +25,8 @@ public class Categoria {
 	@Size(min = 5, max = 255, message = "O atributo descricao deve conter no mínimo 5 e no máximo 255 caracteres.")
 	private String descricao; //equivalente ao titulo varchar
 	
-	private String palavra_chave; //equivalente ao titulo varchar
+	@Column(name = "palavra_chave")
+	private String palavraChave; //equivalente ao titulo varchar
 	
 	/*@OneToMany
 	@JsonIgnoreProperties("categoria")
@@ -57,11 +59,11 @@ public class Categoria {
 	}
 
 	public String getPalavra_chave() {
-		return palavra_chave;
+		return palavraChave;
 	}
 
-	public void setPalavra_chave(String palavra_chave) {
-		this.palavra_chave = palavra_chave;
+	public void setPalavra_chave(String palavraChave) {
+		this.palavraChave = palavraChave;
 	}
 	
 	
