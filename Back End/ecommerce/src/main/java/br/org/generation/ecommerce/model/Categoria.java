@@ -64,7 +64,4 @@ public class Categoria {
 		this.palavra_chave = palavra_chave;
 	}
 	
-	
-	
-
 }
