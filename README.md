@@ -9,12 +9,12 @@
 
   + <dir><h2>Tecnologias utilizadas:</h2>
   <div>
- <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" target="_blank"></a>
- <img src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white" target="_blank"></a>
  <img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white" target="_blank"></a>
  <img src="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white" target="_blank"></a>
  <img src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white" target="_blank"></a>
+ <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" target="_blank"></a>
  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" target="_blank"></a>
+ <img src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white" target="_blank"></a>
   </dir>
 
   + <dir><h2>Projeto desenvolvido por:</h2>
@@ -53,14 +53,14 @@
 [![Github Badge](https://img.shields.io/badge/-Github-black?style=flat-square&labelColor=black&logo=Github&logoColor=white&link=https://github.com/eidisato)](https://github.com/Wesleykfg)
 
 
-<!--<div align = "center">
+  <div align = "center">
   <hr>
   <h2>DOCUMENTAÇÃO</div>
-  <hr>
-  <div><h3> • Diagrama Entidade Relacionamento
+  
+  <div><h3> • DER - Diagrama Entidade Relacionamento
   <br>
   <br>
-  <img width="1300px" src="https://github.com/maiurysousa/Projeto_Integrador/blob/main/Documenta%C3%A7%C3%A3o/db_designer_DER.png?raw=true"/>
+  <img width="1300px" src="https://github.com/maiurysousa/Projeto_Integrador/blob/main/Documenta%C3%A7%C3%A3o/db_marketplace_DER.png"/>
 
 <!--  <p><h3> • Dicionário de Dados
   <br><br>
