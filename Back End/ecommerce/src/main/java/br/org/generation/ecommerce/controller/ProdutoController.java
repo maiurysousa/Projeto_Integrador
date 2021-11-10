@@ -88,14 +88,12 @@ public class ProdutoController {
 		return ResponseEntity.ok(produtoRepository.findAllByNomeOrCor(nome, cor));
 	}
 				
-	@GetMapping("/preco_maior/{preco}")
-	public ResponseEntity<List<Produto>> getPrecoMaior(@PathVariable BigDecimal preco){
-		return ResponseEntity.ok(produtoRepository.findByPrecoGreaterThanOrderByPreco(preco));
+	@GetMapping("/preco_inicial/{inicio}/preco_final/{fim}") // Consulta por preço entre dois valores (Between)
+    public ResponseEntity<List<Produto>> getByPrecoEntre(@PathVariable BigDecimal inicio, @PathVariable BigDecimal fim){
+        return ResponseEntity.ok(produtoRepository.findByPrecoBetween(inicio, fim));
 	}
 	
-	@GetMapping("/preco_menor/{preco}")
-	public ResponseEntity<List<Produto>> getPrecoMenor(@PathVariable BigDecimal preco){
-		return ResponseEntity.ok(produtoRepository.findByPrecoLessThanOrderByPrecoDesc(preco));
-	}
+	
+	
 
 }

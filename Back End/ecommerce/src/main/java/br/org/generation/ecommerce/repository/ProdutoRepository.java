@@ -23,11 +23,8 @@ public interface ProdutoRepository extends JpaRepository <Produto, Long> {
 	
 	public List <Produto> findAllByNomeOrCor(String nome, String cor);
 
-	public List <Produto> findByPrecoGreaterThanOrderByPreco (BigDecimal preco);
+	public List<Produto> findByPrecoBetween(BigDecimal inicio, BigDecimal fim);
 	
-	public List <Produto> findByPrecoLessThanOrderByPrecoDesc (BigDecimal preco);
 	
-	@Query(value = "select * from tb_produtos where preco between :inicio and :fim", nativeQuery = true) // consulta nativa, ou seja SQL raiz
-	public List <Produto> buscarProdutosEntre(@Param("inicio") BigDecimal inicio, @Param("fim") BigDecimal fim); //@param mapeia os parametros
 	
 }
