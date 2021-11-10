@@ -35,7 +35,7 @@
 
 ### Felipe Santos
 [![Linkedin Badge](https://img.shields.io/badge/-Linkedin-blue?style=flat-square&labelColor=blue&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/maria-carolina-s-n-xavier-05340b191/)](https://www.linkedin.com/in/felipe-santos-65b7171bb/) 
-[![Github Badge](https://img.shields.io/badge/-Github-black?style=flat-square&labelColor=black&logo=Github&logoColor=white&link=https://github.com/mcsnsx)](https://github.com/mcsnsx)
+[![Github Badge](https://img.shields.io/badge/-Github-black?style=flat-square&labelColor=black&logo=Github&logoColor=white&link=https://github.com/mcsnsx)](https://github.com/felipedsales)
 
 
 ### Glauber Torres
