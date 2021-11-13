@@ -1,11 +1,14 @@
 <h1 align="center">Projeto Integrador - Generation Brasil </h1>
+<div align="center">
+<img alt="logo-dress-code" height="350" src="https://github.com/maiurysousa/Projeto_Integrador/blob/main/Documenta%C3%A7%C3%A3o/Logotipo_Dress_Code.jpg" target="_blank">
+</div>
 
-  + <dir><h2>APRESENTAÇÃO:</h2>
+ + <div><h2>APRESENTAÇÃO:</h2>
 
   Com a produção em massa de roupas e artigos para a moda a quantidade de lixo gerado é incalculável, tornando-se assim a segunda maior poluidora do mundo. Segundo a Forbes, peças fast fashion são utilizadas, em média, menos de cinco vezes e geram 400% mais emissões de carbono do que roupas de marcas slow fashion.
 
   A solução encontrada foi um E-Commerce, onde iriamos auxiliar pequenos negócios de bairros, elevando assim o comércio local e promovendo a reutilização de peças. Também, com tal objetivo, parte será doada a pessoas necessitadas, auxiliando em tempos difíceis. Esse E-Commerce irá fornecer o cadastro dos brechós onde os usuários terão acesso e constatar a forma de trabalho do estabelecimento. Além disso, os usuários poderão colaborar com doações de peças que serão direcionadas às pessoas necessitadas ou aos brechós cadastrados.
-</dir>
+</div>
 
   + <div><h2>Tecnologias utilizadas:</h2>
   <div>
