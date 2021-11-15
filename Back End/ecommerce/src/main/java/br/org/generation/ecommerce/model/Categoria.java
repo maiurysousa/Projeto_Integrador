@@ -2,6 +2,7 @@ package br.org.generation.ecommerce.model;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -33,10 +34,9 @@ public class Categoria {
 	@Column(name = "palavra_chave") // altera nome da tabela no msql
 	private String palavraChave; //equivalente ao titulo varchar
 	
-	@OneToMany
+	@OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL) 
 	@JsonIgnoreProperties("categoria")
 	private List<Produto>produto;
-	
 
 	public long getId() {
 		return id;
