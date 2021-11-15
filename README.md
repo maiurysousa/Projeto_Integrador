@@ -1,6 +1,6 @@
 <h1 align="center">Projeto Integrador - Generation Brasil </h1>
 <div align="center">
-<img alt="logo-dress-code" height="350" src="https://github.com/maiurysousa/Projeto_Integrador/blob/main/Documenta%C3%A7%C3%A3o/Logotipo_Dress_Code.jpg" target="_blank">
+<img alt="logo-dress-code" height="350" src="https://github.com/maiurysousa/Projeto_Integrador/blob/main/Documenta%C3%A7%C3%A3o/Verde%20Claro%20Simples%20e%20Circular.jpg?raw=true" target="_blank">
 </div>
 
  + <div><h2>APRESENTAÇÃO:</h2>
