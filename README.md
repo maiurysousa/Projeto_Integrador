@@ -1,6 +1,6 @@
 <h1 align="center">Projeto Integrador - Generation Brasil </h1>
 <div align="center">
-<img alt="logo-dress-code" height="350" src="https://github.com/maiurysousa/Projeto_Integrador/blob/main/Documenta%C3%A7%C3%A3o/Logotipo_Dress_Code.jpg" target="_blank">
+<img alt="logo-dress-code" height="350" src="https://github.com/maiurysousa/Projeto_Integrador/blob/main/Documenta%C3%A7%C3%A3o/Verde%20Claro%20Simples%20e%20Circular.jpg?raw=true" target="_blank">
 </div>
 
  + <div><h2>APRESENTAÇÃO:</h2>
@@ -11,15 +11,20 @@
 </div>
 
   + <div><h2>Tecnologias utilizadas:</h2>
-  <div>
- <img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white" target="_blank">
- <img src="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white" target="_blank">
- <img src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white" target="_blank">
- <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" target="_blank">
- <!--<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" target="_blank"></a>-->
- <img src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white" target="_blank">
- <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" target="_blank">
-  </div>
+ 
+ <table align="center">
+    <tr>
+        <td><img alt="Spring" src="https://img.shields.io/badge/spring-%236DB33F.svg?&style=for-the-badge&logo=spring&logoColor=white"/></td>
+        <td><img alt="HTML" src="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white"/></td>
+        <td><img alt="CSS" src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white"/></td>
+        <td><img alt="Java" src="https://img.shields.io/badge/java-%23ED8B00.svg?&style=for-the-badge&logo=java&logoColor=white"/></td>
+        <!--<td><img alt="JS" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/></td>-->
+        <td><img alt="MySQL" src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white"/></td>
+        <td><img alt="React" src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/></td>     
+    </tr>
+</table>
+
+
 
   + <div><h2>Projeto desenvolvido por:</h2>
 

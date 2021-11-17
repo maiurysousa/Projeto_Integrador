@@ -35,10 +35,13 @@ public class Categoria {
 	@Column(name = "palavra_chave") // altera nome da tabela no msql
 	private String palavraChave; //equivalente ao titulo varchar
 	
+<<<<<<< HEAD
 	@OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL)
+=======
+	@OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL) 
+>>>>>>> 1d81d5acbc0cdbb1c7f2779c266478715d583d33
 	@JsonIgnoreProperties("categoria")
 	private List<Produto>produto;
-	
 
 	public long getId() {
 		return id;
