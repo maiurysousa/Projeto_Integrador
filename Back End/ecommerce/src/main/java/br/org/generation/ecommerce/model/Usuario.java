@@ -1,13 +1,19 @@
 package br.org.generation.ecommerce.model;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import io.swagger.annotations.ApiModelProperty;
 
@@ -36,10 +42,9 @@ public class Usuario {
 	@Size(min = 5, max = 500, message = "O atributo descrição deve conter no mínimo 5 e no máximo 500 caracteres.")
 	private String descricao; // descrição do usuário varchar
 	
-	/*@OneToMany
+	@OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
 	@JsonIgnoreProperties("usuario")
-	private Produto produto;
-	*/
+	private List<Produto> produto;
 
 	public long getId() {
 		return id;
@@ -80,6 +85,15 @@ public class Usuario {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
+
+	public List<Produto> getProduto() {
+		return produto;
+	}
+
+	public void setProduto(List<Produto> produto) {
+		this.produto = produto;
+	}
+	
 	
 	
 
