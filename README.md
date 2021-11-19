@@ -102,7 +102,7 @@
  <a href="https://spring.io/projects/spring-boot">Spring Boot </a><br><br>
  <a href="https://spring.io/projects/spring-security">Spring Security</a><br><br>
  <a href="https://github.com/maiurysousa/Spring/blob/main/Generation/Documenta%C3%A7%C3%A3o/Guia%20Jpa.pdf">Spring data JPA</a><br><br>
- <a href="https://github.com/maiurysousa/Projeto_Integrador/blob/main/Documenta%C3%A7%C3%A3o/Dresscode.pdf">Documentação APL e SDK</a>
+ <a target="_blank" href="https://github.com/maiurysousa/Projeto_Integrador/blob/main/Documenta%C3%A7%C3%A3o/Dresscode.pdf">Documentação APL e SDK</a>
 
 
 
