@@ -9,6 +9,8 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
+import io.swagger.annotations.ApiModelProperty;
+
 @Entity //Entity informa que essa classe irá gerar uma tabela
 @Table(name = "tb_usuario") //Criar tabela e o nome - equivalente ao create table
 public class Usuario {
@@ -21,7 +23,8 @@ public class Usuario {
 	@Size(min = 5, max = 255, message = "O atributo nome completo deve conter no mínimo 5 e no máximo 255 caracteres.")
 	private String nomeCompleto; // nome do usuario varchar
 	
-	@Email
+	@ApiModelProperty(example = "email@email.com.br")
+	@Email(message = "O atributo Usuário deve ser um email válido!")
 	@NotBlank(message = "O atributo usuario é obrigatório!")
 	@Size(min = 5, max = 255, message = "O atributo usuario deve conter no mínimo 5 e no máximo 255 caracteres.")
 	private String usuario; // email varchar
