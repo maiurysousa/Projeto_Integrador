@@ -1,6 +1,6 @@
 <h1 align="center">Projeto Integrador - Generation Brasil </h1>
 <div align="center">
-<img alt="logo-dress-code" height="350" src="https://github.com/maiurysousa/Projeto_Integrador/blob/main/Documenta%C3%A7%C3%A3o/Verde%20Claro%20Simples%20e%20Circular.jpg?raw=true" target="_blank">
+<img alt="logo-dress-code" height="350" src="https://images-ext-1.discordapp.net/external/oQEXl101bcDrKCB30LLr5tIGPGEQ4KUc9uu_RGBuy8U/https/i.imgur.com/dRAmj7j.png?width=300&height=300" target="_blank">
 </div>
 
  + <div><h2>APRESENTAÇÃO:</h2>
