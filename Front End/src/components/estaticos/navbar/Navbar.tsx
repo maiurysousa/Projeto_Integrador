@@ -1,9 +1,16 @@
 import React from "react";
 import { AppBar, Toolbar, Typography, Box } from "@material-ui/core";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import useLocalStorage from "react-use-localstorage";
 import "./Navbar.css"
 
 function Navbar() {
+    let history = useHistory(); // para redireccionar
+    const [token, setToken] = useLocalStorage('token'); // para guardar el token en el localstorage
+    function logout() {
+        setToken(''); // para apagar el token del localstorage
+        history.push('/home'); // para redireccionar a la pagina de login
+    }
     return (
         <>
             <AppBar position="fixed">
@@ -37,17 +44,13 @@ function Navbar() {
                             </Typography>
                         </Box>
                         </Link>
+                        <Box mx={1} className='cursor text-decorator-none'>
+                            <Typography variant="h6" color="inherit" onClick={()=> logout()}>
+                                logout
+                            </Typography>
+                        </Box>
                         
-                        <Link to="/login" className="text-decorator-none">
-                            <Box mx={1} style={{ cursor: "pointer", color: "white" }}>
-                                <Typography variant="h6" color="inherit">
-                                    logout
-                                </Typography>
-                            </Box>
-                        </Link>
-
                     </Box>
-
                 </Toolbar>
             </AppBar>
         </>

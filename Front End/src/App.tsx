@@ -2,9 +2,9 @@ import React from 'react';
 import Navbar from "./components/estaticos/navbar/Navbar";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Footer from "./components/estaticos/footer/Footer";
-import CadastroUsuario from "./components/paginas/cadastroUsuario/CadastroUsuario";
-import Home from "./components/paginas/home/Home";
-import Login from "./components/paginas/login/Login.";
+import CadastroUsuario from "./paginas/cadastroUsuario/CadastroUsuario";
+import Home from "./paginas/home/Home";
+import Login from "./paginas/login/Login";
 import './App.css';
 
 
