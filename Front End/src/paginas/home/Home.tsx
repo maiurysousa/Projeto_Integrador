@@ -18,8 +18,8 @@ function Home() {
     return (
         <>
             <Grid container direction="row" justifyContent="center" alignItems="center" className="caixa">
-                <Grid alignItems="center" item xs={6}>
-                    <Box paddingX={20} >
+                <Grid alignItems="center" item xs={12} sm={12} className='imagem'>
+                    <Box  >
                         <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" className="titulo">Seja bem vinde a Dresscode!</Typography>
                         <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className="titulo">O seu marketplace favorito!!!</Typography>
                     </Box>
@@ -29,8 +29,8 @@ function Home() {
                         <Button variant="outlined" className="botao">Ver Produtos</Button>
                     </Box>
                 </Grid>
-                <Grid item xs={6} >
-                    <img src="https://i.imgur.com/H88yIo2.png" alt="" width="500px" height="500px" />
+                <Grid item xs={12} sm={12} className='imagem'>
+                    
                 </Grid>
                 <Grid xs={12} className="caixa">
                 </Grid>
