@@ -1,0 +1,19 @@
+.cursor{
+    cursor: pointer;
+    color: white;
+}
+
+.text-decorator-none{
+    text-decoration: none;
+}
+
+.nav-color{
+    background-color: #1E1514;
+}
+
+.logo{
+    width: 35px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
