@@ -6,6 +6,12 @@ import CadastroUsuario from "./paginas/cadastroUsuario/CadastroUsuario";
 import Home from "./paginas/home/Home";
 import Login from "./paginas/login/Login";
 import './App.css';
+import CarouselComponent from './components/carousel/CarrosselComponent';
+import Lojas from "./components/paginas/lojas/Lojas";
+import Produtos from "./components/paginas/produtos/Produtos";
+import ContactUs from './components/paginas/contactUs/ContactUs';
+import PequenoNegocio from './components/paginas/pequenoNegocio/PequenoNegocio';
+import Brecho from './components/paginas/brecho/Brecho';
 
 
 function App() {
@@ -29,6 +35,26 @@ function App() {
           </Route>
           <Route path="/cadastrousuario">
             <CadastroUsuario/>
+            </Route>
+
+            <Route path="/brecho">
+            <Brecho/>
+            </Route>
+
+            <Route path="/pequenoNegocio">
+            <PequenoNegocio/>
+            </Route>
+            
+            <Route path="/contactus">
+            <ContactUs/>
+            </Route>
+
+            <Route path="/produtos">
+            <Produtos />
+            </Route>
+
+            <Route path="/lojas">
+            <Lojas/>
             </Route>
         </div>
       </Switch>

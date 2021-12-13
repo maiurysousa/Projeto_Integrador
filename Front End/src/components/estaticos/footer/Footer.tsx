@@ -8,7 +8,7 @@ function Footer() {
         <>
             <Grid container direction="row" justifyContent="center" alignItems="center">
                 <Grid alignItems="center" xs={12}   >
-                    <Box style={{ backgroundColor: "#013A20", height: "100px" }}>
+                    <Box style={{ backgroundColor: "#732E1F", height: "100px" }}>
                         <Box paddingTop={2} display="flex" alignItems="center" justifyContent="center">
                             <Typography variant="h5" align="center" gutterBottom style={{ color: "white" }}>Siga-nos nas redes sociais! </Typography>
                         </Box>
@@ -21,7 +21,7 @@ function Footer() {
                             </a>
                         </Box>
                     </Box>
-                    <Box style={{ backgroundColor: "#013A20", height: "60px" }} >
+                    <Box style={{ backgroundColor: "#732E1F", height: "60px" }} >
                         <Box paddingTop={1}>
                             <Typography variant="subtitle2" align="center" gutterBottom style={{ color: "white" }} > © 2021 DressCode LTDA. </Typography>
                         </Box>
