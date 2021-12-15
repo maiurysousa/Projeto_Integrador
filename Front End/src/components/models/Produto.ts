@@ -1,15 +1,14 @@
-import Categoria from "./Categoria";
-import User from "./User";
+import Categoria from "./Categoria"
+import User from "../../models/User"
 
 interface Produto{
     id: number;
-    nome: string;
     tamanho: string;
     cor: string;
     descricao: string;
     preco: number;
     foto: string;
-    usuario?: User|null;
+    usuario?: User|null
     categoria?: Categoria|null
 }
 

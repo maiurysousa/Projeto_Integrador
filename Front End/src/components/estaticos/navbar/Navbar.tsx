@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { AppBar, Toolbar, Typography, Box } from "@material-ui/core";
 import { Link, useHistory } from "react-router-dom";
 import useLocalStorage from "react-use-localstorage";
-import "./Navbar.css"
+import "./Navbar.css";
 import { Button } from "../../button/Button";
 import Dropdown from "../../dropdown/Dropdown";
-import Produtos from "../../paginas/produtos/Produtos";
+import ListaProduto from '../../produtos/listaProduto/ListaProduto'
 import AccountCircleSharpIcon from '@mui/icons-material/AccountCircleSharp';
 import Search from "./Search";
+import Sobre from "../../../paginas/sobre/Sobre";
 
 function Navbar() {
     let history = useHistory(); // para redireccionar
@@ -76,7 +77,6 @@ function Navbar() {
                         <Link to="/lojas" className="nav-links" onClick={closeMobileMenu}>
                             Lojas <i className="fas fa-caret-down" />
                         </Link>
-                        {dropdown && <Dropdown />}
                     </li>
                     <li className="nav-item">
                         <Link to="/produtos" className="nav-links" onClick={closeMobileMenu}>
@@ -84,8 +84,8 @@ function Navbar() {
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/contactUs" className="nav-links" onClick={closeMobileMenu}>
-                            Contact Us
+                        <Link to="/sobre" className="nav-links" onClick={closeMobileMenu}>
+                            Sobre
                         </Link>
                     </li>
                     <Search />

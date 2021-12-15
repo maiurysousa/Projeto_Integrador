@@ -1,0 +1,66 @@
+.caixa{
+    background-color:#ECD5BB !important;
+    width: 100vh;
+    min-height: 100vh;
+}
+
+.titulo{
+    color: black !important;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #1E1514;
+    font-size: 3em;
+}
+
+.botao{
+    border-color: #1E1514 !important;
+    color: #1E1514 !important;
+}
+
+.postagens{
+    background-color: #ECD5BB !important;
+}
+
+.card{
+    background-color: #f2f2f2 !important;
+    border-color: #f2f2f2 !important;
+    width: 20%;
+    margin: 1%;
+    padding: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .card{
+        width: 100%;
+    }
+}
+
+.card-img{
+    width: 100%;
+}
+
+.pitch-autor{
+    font-size: 12px;
+    font-family: 'Podkova', serif !important;
+    color: #000000 !important;
+    text-align: justify !important;
+}
+
+.img{
+    width: 100%;
+    height: 100px;
+}
+
+#textbox {display:flex; flex-flow:row wrap;}
+
+.alignleft {
+width:500%;
+text-align:left;
+}
+.aligncenter {
+width:33.33333%;
+text-align:center;
+}
+.alignright {
+width:500%;
+text-align:right;
+}
