@@ -1,31 +1,17 @@
 import React from "react";
 import { Typography, Box, Grid, Button } from "@material-ui/core";
-import { useHistory } from "react-router-dom";
-import useLocalStorage from "react-use-localstorage";
-import { useEffect } from "react";
-//import CarrosselComponent from "../../carousel/CarrosselComponent";
 import "./Home.css";
-import CarouselComponent from "../../components/carousel/CarouselComponent";
+import CarouselComponent from "../../carousel/CarouselComponent";
 
 function Home() {
-    let history = useHistory();
-    const [token, setToken] = useLocalStorage('token');
-
-    useEffect(() => {
-        if (token == '') {
-            history.push('/home')
-        }
-
-    }, [token]);
     return (
         <>
-        <Grid container direction="row" justifyContent="center" alignItems="center" className="caixa">
+            <Grid container direction="row" justifyContent="center" alignItems="center" className="caixa">
                 <Grid xs={12} className="caixa">
                     <Box>
                         <img src="https://imgur.com/KeutRE2.png" alt="" width="100%" />
                         <CarouselComponent />
                     </Box>
-
                 </Grid>
 
                     <Grid xs={5} sm={5} className="img">
@@ -40,7 +26,7 @@ function Home() {
 
                     <Grid xs={5} sm={5} className="img">
                         <img src="https://i.imgur.com/0oqcguC.png" alt="" className="img" />
-
+                    
                     </Grid>
                     
                     

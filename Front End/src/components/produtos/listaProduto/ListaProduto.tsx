@@ -5,13 +5,15 @@ import { busca } from '../../../services/Service'
 import { Box, Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
 import './ListaProduto.css';
 import { useHistory } from 'react-router-dom'
+import useLocalStorage from 'react-use-localstorage';
+import Produtos from '../../../paginas/produtos/PaginaProdutos';
 
 
 function ListaProduto() {
-    const [produtos, setProdutos] = useState<Produtos[]>([])
+    const [produtos, setProdutos] = useState<Produto[]>([])
     let history = useHistory();
     const [token, setToken] = useLocalStorage('token');
-  );
+
 
 
 
@@ -64,14 +66,14 @@ function ListaProduto() {
                             <CardActions>
                                 <Box display="flex" justifyContent="center" mb={1.5}>
 
-                                    <Link to={`/formularioProdutos/${post.id}`} className="text-decorator-none" >
+                                    <Link to={`/form-produtos/${post.id}`} className="text-decorator-none" >
                                         <Box mx={1}>
                                             <Button variant="contained" className="marginLeft" size='small' color="primary" >
                                                 atualizar
                                             </Button>
                                         </Box>
                                     </Link>
-                                    <Link to={`/deletarProduto/${post.id}`} className="text-decorator-none">
+                                    <Link to={`/deletarprodutos/${post.id}`} className="text-decorator-none">
                                         <Box mx={1}>
                                             <Button variant="contained" size='small' color="secondary">
                                                 deletar
