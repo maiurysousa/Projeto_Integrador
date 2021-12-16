@@ -1,10 +1,82 @@
-import React from "react";
-import { Grid, Box, Typography, Button, TextField } from "@material-ui/core";
+import React, { ChangeEvent, useEffect, useState } from "react";
+import { Grid, Box, Typography, Button, TextField, FormControl, InputLabel, Select, FormHelperText, MenuItem } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import './CadastroUsuario.css';
+import { toast } from 'react-toastify';
+import { useHistory } from 'react-router-dom';
+import User from '../../../models/User';
+import { cadastroUsuario } from "../../../services/Service";
 
 
 function CadastroUsuario(){
+
+    let history = useHistory();
+    const [confirmarSenha, setConfirmarSenha] = useState<String>("")
+    // crie um atributo tipo para o user
+    const [user, setUser] = useState<User>(
+        {
+            id: 0,
+            nomeCompleto: '',
+            usuario: '',
+            senha: '',
+        })
+    // crie um atributo tipo para o userResult
+    const [userResult, setUserResult] = useState<User>(
+        {
+            id: 0,
+            nomeCompleto: '',
+            usuario: '',
+            senha: '',
+        })
+
+    useEffect(() => {
+        if (userResult.id != 0) {
+            history.push("/login")
+        }
+    }, [userResult])
+
+
+    function confirmarSenhaHandle(e: ChangeEvent<HTMLInputElement>) {
+        setConfirmarSenha(e.target.value)
+    }
+
+
+    function updatedModel(e: ChangeEvent<HTMLInputElement>) {
+
+        setUser({
+            ...user,
+            [e.target.name]: e.target.value
+        })
+
+    }
+    async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
+        e.preventDefault()
+        console.log(JSON.stringify(user))
+        if (confirmarSenha == user.senha) {
+            cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult)
+            toast.success('Usuario cadastrado com sucesso', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            });
+        } else {
+            toast.error('Dados inconsistentes. Favor verificar as informações de cadastro.', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            });
+        }
+    }
     return(
         <Grid container direction='row' justifyContent='center' alignItems='center' className='background-color'>
             <Grid item xs={12} sm={6} className='imagem2' ></Grid>

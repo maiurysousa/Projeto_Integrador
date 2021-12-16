@@ -7,6 +7,7 @@ import './Login.css';
 import { toast } from 'react-toastify';
 import { useDispatch } from 'react-redux';
 import {addToken} from '../../store/tokens/actions';
+import { addId, addName, addTipo } from '../../store/user/actions';
 
 function Login() {
 
@@ -23,6 +24,16 @@ function Login() {
     }
     )
 
+    const [respUserLogin, setRespUserLogin] = useState<UserLogin>(
+        {
+            id: 0,
+            nomeCompleto: '',
+            usuario: '',
+            senha: '',
+            token: ''
+        }
+    )
+
 function updatedModel(e: ChangeEvent<HTMLInputElement>) {
     setUserLogin({
         ...userLogin,
@@ -31,11 +42,13 @@ function updatedModel(e: ChangeEvent<HTMLInputElement>) {
 }
 
 useEffect(() => {
-    if (token !== '') {
-        dispatch(addToken(token));
+    if (respUserLogin.token != '') {
+        dispatch(addToken(respUserLogin.token));
+        dispatch(addName(respUserLogin.nomeCompleto));
+        dispatch(addId(respUserLogin.id));
         history.push('/home')
     }
-}, [token])
+}, [respUserLogin.token])
 
 async function onSubmit(e: ChangeEvent<HTMLFormElement>){
     e.preventDefault();

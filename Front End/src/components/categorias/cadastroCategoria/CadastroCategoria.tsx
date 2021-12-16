@@ -2,9 +2,9 @@ import React, { useState, useEffect, ChangeEvent } from 'react'
 import { Container, Typography, TextField, Button } from "@material-ui/core"
 import { useHistory, useParams } from 'react-router-dom'
 import './CadastroCategoria.css';
-import useLocalStorage from 'react-use-localstorage';
 import { buscaId, post, put } from '../../../services/Service';
 import Categoria from '../../../models/Categoria';
+import useLocalStorage from 'react-use-localstorage';
 
 
 function CadastroCategoria() {
