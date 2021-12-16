@@ -7,12 +7,17 @@ import './ListaProduto.css';
 import { useHistory } from 'react-router-dom'
 import useLocalStorage from 'react-use-localstorage';
 import Produtos from '../../../paginas/produtos/PaginaProdutos';
+import { TokenState } from '../../../store/tokens/tokensReducer';
+import { useSelector } from 'react-redux';
 
 
 function ListaProduto() {
     const [produtos, setProdutos] = useState<Produto[]>([])
     let history = useHistory();
-    const [token, setToken] = useLocalStorage('token');
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+    );
+
 
 
 
@@ -35,7 +40,7 @@ function ListaProduto() {
         <>
             {
                 produtos.map(post => (
-                    <Box m={2} >
+                    <Box m={2} width="30%" display="flex">
                         <Card variant="outlined">
                             <CardContent>
                                 <Typography color="textSecondary" gutterBottom>
@@ -67,7 +72,7 @@ function ListaProduto() {
                                 <Box display="flex" justifyContent="center" mb={1.5}>
 
                                     <Link to={`/form-produtos/${post.id}`} className="text-decorator-none" >
-                                        <Box mx={1}>
+                                        <Box mx={1} >
                                             <Button variant="contained" className="marginLeft" size='small' color="primary" >
                                                 atualizar
                                             </Button>

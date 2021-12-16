@@ -9,12 +9,18 @@ import ListaProduto from '../../produtos/listaProduto/ListaProduto'
 import AccountCircleSharpIcon from '@mui/icons-material/AccountCircleSharp';
 import Search from "./Search";
 import Sobre from "../../../paginas/sobre/Sobre";
+import { useDispatch, useSelector } from "react-redux";
+import { TokenState } from "../../../store/tokens/tokensReducer";
+import { addToken } from "../../../store/tokens/actions";
 
 function Navbar() {
     let history = useHistory(); // para redireccionar
-    const [token, setToken] = useLocalStorage('token'); // para guardar el token en el localstorage
-    function logout() {
-        setToken(''); // para apagar el token del localstorage
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+    );
+    const dispatch = useDispatch();
+    function goLogout() {
+        dispatch(addToken(''));
         history.push('/home'); // para redireccionar a la pagina de login
     }
     const [click, setClick] = useState(false)
@@ -38,6 +44,36 @@ function Navbar() {
             setDropdown(false);
         }
     };
+
+    var navbarLogo;
+
+    if(token != ""){ 
+        navbarLogo = <Box sx={{ flexGrow: 1 }}>
+        <AppBar position="static" className="sobreappbar">
+                <Toolbar variant="dense">
+                    <Box>
+                        <img src="https://imgur.com/YRuuBDW.png" className='imgsobreappbar' />
+                    </Box>
+                    <Box >
+                        <Typography variant="h5" color="inherit" className='txtappbar' >
+                            .dresscode
+                        </Typography>
+                    </Box>
+                    <Box >
+                        <AccountCircleSharpIcon className="accicon" />
+                    </Box>
+                    <Link to="/login" className="nav-links" onClick={closeMobileMenu}>
+                    <Box>
+                        <Typography className='txticon'>
+                            Logout
+                        </Typography>
+                    </Box>
+                    </Link>
+                </Toolbar>
+            </AppBar>
+    </Box>
+    }
+
     return (
         <>
             <AppBar position="static" className="sobreappbar">
@@ -54,7 +90,7 @@ function Navbar() {
                         <AccountCircleSharpIcon className="accicon" />
                     </Box>
                     <Link to="/login" className="nav-links" onClick={closeMobileMenu}>
-                    <Box>
+                    <Box onClick={() => goLogout()} className="nav-links">
                         <Typography className='txticon'>
                             Login ou cadastre-se
                         </Typography>
@@ -67,7 +103,7 @@ function Navbar() {
                 <ul className={click ? "nav-menu active" : "nav-menu"}>
                     <li className="nav-item">
                         <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-                            home
+                            Home
                         </Link>
                     </li>
                     <li className="nav-item"

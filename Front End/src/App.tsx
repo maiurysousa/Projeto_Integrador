@@ -7,7 +7,7 @@ import Home from "./paginas/home/Home";
 import Login from "./paginas/login/Login";
 import CarrosselComponent from "./components/carousel/CarouselComponent";
 import './App.css';
-
+import {Provider} from 'react-redux';
 /*import Lojas from "./components/paginas/lojas/Lojas";
 import Produtos from "./components/paginas/produtos/Produtos";
 import ContactUs from './components/paginas/contactUs/ContactUs';
@@ -22,11 +22,16 @@ import ListaProduto from './components/produtos/listaProduto/ListaProduto';
 import Sobre from './paginas/sobre/Sobre';
 import DeletarProduto from './components/produtos/deletarproduto/DeletarProduto';
 import DeletarCategoria from './components/categorias/deletarcategoria/DeletarCategoria';
+import { ToastContainer } from 'react-toastify';
+import store from './store/store';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
   return (
     <>
+      <Provider store={store}>
+      <ToastContainer />
       <Router>
         <Navbar />
         <Switch>
@@ -60,7 +65,7 @@ function App() {
               <Sobre />
             </Route>
 
-            <Route path="/produtos">
+            <Route exact path="/produtos">
               <ListaProduto />
             </Route>
 
@@ -96,6 +101,7 @@ function App() {
         </Switch>
         <Footer />
       </Router>
+      </Provider>
     </>
   );
 }
