@@ -37,11 +37,12 @@ function ListaProduto() {
     }, [produtos.length])
 
     return (
-        <>
+        <Box  display="flex" justifyContent="center" flexWrap="wrap">
             {
                 produtos.map(post => (
                     <Box m={2} width="30%" display="flex">
                         <Card variant="outlined">
+                            <img src={post.foto} alt="" />
                             <CardContent>
                                 <Typography color="textSecondary" gutterBottom>
                                     Produtos
@@ -61,9 +62,7 @@ function ListaProduto() {
                                 <Typography variant="body2" component="p">
                                     {post.preco}
                                 </Typography>
-                                <Typography variant="body2" component="p">
-                                    {post.foto}
-                                </Typography>
+                               
                                 <Typography variant="body2" component="p">
                                     {post.categoria?.descricao}
                                 </Typography>
@@ -91,7 +90,7 @@ function ListaProduto() {
                     </Box>
                 ))
             }
-        </>
+        </Box>
     )
 }
 
