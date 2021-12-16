@@ -87,7 +87,7 @@ function App() {
               <DeletarCategoria />
             </Route>
 
-            <Route path="/categorias">
+            <Route exact path="/categorias">
               <ListaCategoria />
             </Route>
 

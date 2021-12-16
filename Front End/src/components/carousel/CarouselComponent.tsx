@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import Carousel from 'react-bootstrap/Carousel'
 
-function CaroucelComponent() {
+function CarouselComponent() {
     const [itens, setItens] = useState([
         {
             img: "https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/02gambarini_779-24.jpg?w=1900&h=1269",
@@ -20,7 +20,7 @@ function CaroucelComponent() {
     ])
     return (
         <div>
-            <Carousel>
+            <Carousel >
                 {
                     itens.map(item => (
                         <Carousel.Item>
@@ -43,4 +43,4 @@ function CaroucelComponent() {
     )
 }
 
-export default CaroucelComponent
+export default CarouselComponent;

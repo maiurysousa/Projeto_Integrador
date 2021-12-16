@@ -2,13 +2,11 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Produto from '../../../models/Produto';
 import { busca } from '../../../services/Service'
-import { Box, Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
+import { Box, Card, CardActions, CardContent, Button, Typography, Grid } from '@material-ui/core';
 import './ListaProduto.css';
 import { useHistory } from 'react-router-dom'
-import Produtos from '../../../paginas/produtos/PaginaProdutos';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { useSelector } from 'react-redux';
-import { UserState } from '../../../store/user/userReducer';
 
 
 function ListaProduto() {
@@ -18,9 +16,7 @@ function ListaProduto() {
         (state) => state.tokens
     );
 
-    const nome = useSelector<UserState, UserState["names"]>(
-        (state) => state.names
-    );
+
 
 
 
@@ -39,11 +35,33 @@ function ListaProduto() {
     }, [produtos.length])
 
     return (
-        <>
+
+        <Box display="flex" justifyContent="center" flexWrap="wrap">
+            <Grid xs={12} className="caixaProdutos">
+                <Box>
+                    <img src="https://imgur.com/HzTBdw2.png" alt="" width="100%" />
+                </Box>
+            </Grid>
+
+            <Grid xs={5} sm={5} className="img">
+                <img src="https://i.imgur.com/0oqcguC.png" alt="" className="img" />
+
+            </Grid>
+
+            <Grid xs={2} sm={2} className="padding" >
+                <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" className="aligncenterProdutos">Produtos</Typography>
+
+            </Grid>
+
+            <Grid xs={5} sm={5} className="img">
+                <img src="https://i.imgur.com/0oqcguC.png" alt="" className="img" />
+
+            </Grid>
             {
                 produtos.map(post => (
                     <Box m={2} width="30%" display="flex">
                         <Card variant="outlined">
+                            <img src={post.foto} alt="" />
                             <CardContent>
                                 <Typography color="textSecondary" gutterBottom>
                                     Produtos
@@ -63,9 +81,7 @@ function ListaProduto() {
                                 <Typography variant="body2" component="p">
                                     {post.preco}
                                 </Typography>
-                                <Typography variant="body2" component="p">
-                                    {post.foto}
-                                </Typography>
+
                                 <Typography variant="body2" component="p">
                                     {post.categoria?.descricao}
                                 </Typography>
@@ -93,7 +109,8 @@ function ListaProduto() {
                     </Box>
                 ))
             }
-        </>
+
+        </Box>
     )
 }
 
