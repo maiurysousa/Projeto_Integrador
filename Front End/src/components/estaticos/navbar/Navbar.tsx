@@ -1,72 +1,117 @@
-import React from "react";
+import React, { useState } from "react";
 import { AppBar, Toolbar, Typography, Box } from "@material-ui/core";
 import { Link, useHistory } from "react-router-dom";
-import useLocalStorage from "react-use-localstorage";
-import "./Navbar.css"
-import MenuComponent from "../../menu/MenuComponent";
+import "./Navbar.css";
+import AccountCircleSharpIcon from '@mui/icons-material/AccountCircleSharp';
+import Search from "./Search";
+import { useDispatch, useSelector } from "react-redux";
+import { TokenState } from "../../../store/tokens/tokensReducer";
+import { addToken } from "../../../store/tokens/actions";
 
 function Navbar() {
-    let history = useHistory(); // para redirecionar
-    const [token, setToken] = useLocalStorage('token'); // para guardar o token no localstorage
-    function logout() {
-        setToken(''); // para apagar o token do localstorage
-        history.push('/home'); // para redirecionar para pagina de login
+    let history = useHistory(); // para redireccionar
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+    );
+    const dispatch = useDispatch();
+    function goLogout() {
+        dispatch(addToken(''));
+        history.push('/home'); 
     }
-    
+    const [click, setClick] = useState(false)
+    const [dropdown, setDropdown] = useState(false);
+
+    const handleClick = () => setClick(!click)
+    const closeMobileMenu = () => setClick(false);
+
+    const onMouseEnter = () => {
+        if (window.innerWidth < 960) {
+            setDropdown(false);
+        } else {
+            setDropdown(true);
+        }
+    };
+
+    const onMouseLeave = () => {
+        if (window.innerWidth < 960) {
+            setDropdown(false);
+        } else {
+            setDropdown(false);
+        }
+    };
+
+    var navbarLogo;
+
+    if (token != "") {
+        navbarLogo = <Link to="/login" className="nav-links" onClick={closeMobileMenu}>
+            <Box onClick={() => goLogout()}>
+                <Typography className='txticon'>
+                    Logout
+                </Typography>
+            </Box>
+        </Link>
+
+
+    } else {
+        navbarLogo = <Link to="/login" className="nav-links" onClick={closeMobileMenu}>
+            <Box  className="nav-links">
+                <Typography className='txticon'>
+                    Login ou cadastre-se
+                </Typography>
+            </Box>
+        </Link>
+
+    }
+
     return (
         <>
-            <AppBar position="static">
-                <Toolbar variant="dense" className="nav-color">
-                    <Box className="cursor" >
-                    <img src="https://images-ext-2.discordapp.net/external/hnb_d1ReaJvvWPqpxbpg-VnccZWS0XoocPyYebXy8vc/https/i.imgur.com/E20cppD.png?width=189&height=300" alt="Logo Dresscode" className="logo" />
+            <AppBar position="static" className="sobreappbar">
+                <Toolbar variant="dense">
+                    <Box>
+                        <img src="https://imgur.com/YRuuBDW.png" className='imgsobreappbar' />
                     </Box>
-
-                    <Box display="flex" justifyContent="start" 
-                    sx={{ display: { xs: 'none', sm: 'flex' } }}>  
-                    <Link to="/home" className="text-decorator-none">
-                        <Box mx={1} className="cursor">
-                            <Typography variant="h6" color="inherit">
-                                home
-                            </Typography>
-                        </Box>
-                        </Link>
-                        <Link to="/categorias" className="text-decorator-none">
-                        <Box mx={1} className="cursor">
-                            <Typography variant="h6" color="inherit">
-                                categorias
-                            </Typography>
-                        </Box>
-                        </Link>
-                        <Link to="/sobre" className="text-decorator-none">
-                        <Box mx={1} className="cursor">
-                            <Typography variant="h6" color="inherit">
-                                sobre
-                            </Typography>
-                        </Box>
-                        </Link>
-                        <Link to="/login" className="text-decorator-none">
-                        <Box mx={1} className="cursor">
-                            <Typography variant="h6" color="inherit">
-                                login
-                            </Typography>
-                        </Box>
-                        </Link>
-                        <Box mx={1} className='cursor text-decorator-none'>
-                            <Typography variant="h6" color="inherit" onClick={()=> logout()}>
-                                logout
-                            </Typography>
-                        </Box>
-                        
+                    <Box >
+                        <Typography variant="h5" color="inherit" className='txtappbar' >
+                            .dresscode
+                        </Typography>
                     </Box>
-                    <Box display="flex" justifyContent="start"
-                    marginLeft="auto"
-                        sx={{ display: { xs: 'flex', sm: 'none' } }}>
-                        <MenuComponent/>
+                    <Box >
+                        <AccountCircleSharpIcon className="accicon" onClick={() => goLogout()} />
                     </Box>
+                    {navbarLogo}
                 </Toolbar>
             </AppBar>
+
+            <nav className="navbar">
+                <ul className={click ? "nav-menu active" : "nav-menu"}>
+                    <li className="nav-item">
+                        <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                            Home
+                        </Link>
+                    </li>
+                    
+                    <li className="nav-item">
+                        <Link to="/produtos" className="nav-links" onClick={closeMobileMenu}>
+                            Produtos
+                        </Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link to="/categorias" className="nav-links" onClick={closeMobileMenu}>
+                            Categorias
+                        </Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link to="/sobre" className="nav-links" onClick={closeMobileMenu}>
+                            Sobre
+                        </Link>
+                    </li>
+                    <Search />
+                </ul>
+            </nav>
         </>
     )
 }
+
+
 
 export default Navbar;
