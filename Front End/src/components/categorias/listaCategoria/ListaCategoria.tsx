@@ -12,11 +12,11 @@ function ListaCategoria() {
     const [categorias, setCategorias] = useState<Categoria[]>([])
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
-      )
+    )
     let history = useHistory();
 
     async function getCategoria() {
-        await busca("/categorias", setCategorias,{
+        await busca("/categorias", setCategorias, {
             headers: {
                 'Authorization': token
             }
@@ -30,6 +30,14 @@ function ListaCategoria() {
 
     return (
         <Box display="flex" justifyContent="center" flexWrap="wrap">
+            <Box mx={1}>
+            <Link to="/form-categorias">
+                <Button variant="contained" size='small' className="botao-2 " >
+                    cadastro
+                </Button>
+                </Link>
+            </Box>
+
             {
                 categorias.map(categoria => (
                     <Box m={2}  >
@@ -65,9 +73,13 @@ function ListaCategoria() {
                                 </Box>
                             </CardActions>
                         </Card>
+
                     </Box>
+
                 ))
+                
             }
+            
         </Box>
     );
 }
