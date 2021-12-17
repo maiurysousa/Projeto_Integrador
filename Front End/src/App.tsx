@@ -25,6 +25,7 @@ import DeletarCategoria from './components/categorias/deletarcategoria/DeletarCa
 import { ToastContainer } from 'react-toastify';
 import store from './store/store';
 import 'react-toastify/dist/ReactToastify.css';
+import Navbar2 from './components/estaticos/navbar/Navbar2';
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
       <ToastContainer />
       <Router>
         <Navbar />
+        <Navbar2 />
         <Switch>
           <div style={{ minHeight: "100vh" }}>
 

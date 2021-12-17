@@ -5,17 +5,17 @@ import Carousel from 'react-bootstrap/Carousel'
 function CarouselComponent() {
     const [itens, setItens] = useState([
         {
-            img: "https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/02gambarini_779-24.jpg?w=1900&h=1269",
-            titulo: "Titulo 1",
+            img: "https://i.imgur.com/tZtWvvL.png",
+            titulo: "",
         },
         {
-            img: "https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/02gambarini_779-24.jpg?w=1900&h=1269",
-            titulo: "Titulo 1",
+            img: "https://i.imgur.com/ImeNjfB.png",
+            titulo: "",
 
         },
         {
-            img: "https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/02gambarini_779-24.jpg?w=1900&h=1269",
-            titulo: "Titulo 1",
+            img: "https://i.imgur.com/HIG6o6E.png",
+            titulo: "",
         },
     ])
     return (

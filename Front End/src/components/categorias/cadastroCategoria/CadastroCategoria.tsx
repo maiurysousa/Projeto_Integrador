@@ -6,6 +6,7 @@ import { buscaId, post, put } from '../../../services/Service';
 import Categoria from '../../../models/Categoria';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import { toast } from 'react-toastify';
 
 
 function CadastroCategoria() {
@@ -24,9 +25,17 @@ function CadastroCategoria() {
 
     useEffect(() => {
         if (token == "") {
-            alert("Você precisa estar logado")
+            toast.error("Você precisa estar logado", {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            })
             history.push("/login")
-
         }
     }, [token])
 
@@ -49,7 +58,7 @@ function CadastroCategoria() {
         setCategoria({
             ...categoria,
             [e.target.name]: e.target.value,
-            
+            produto:null
         })
 
     }
@@ -65,14 +74,32 @@ function CadastroCategoria() {
                     'Authorization': token
                 }
             })
-            alert('Categoria atualizada com sucesso');
+            toast.success("Categoria atualizada com sucesso", {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            })
         } else {
             post(`/categorias`, categoria, setCategoria, {
                 headers: {
                     'Authorization': token
                 }
             })
-            alert('Categoria cadastrada com sucesso!');
+            toast.success("Categoria cadastrada com sucesso", {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            })
         }
         back()
 
