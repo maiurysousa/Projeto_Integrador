@@ -14,6 +14,7 @@
     min-height: 100vh;
     background-size: cover;
     background-position: center;
+    background-image: ("https://imgur.com/NiCjzbg.jpg");
 }
 
 @media only screen and ( max-width: 600px ){

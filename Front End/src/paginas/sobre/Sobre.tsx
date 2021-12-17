@@ -11,7 +11,7 @@ function Sobre() {
 
         <Grid container direction="row" justifyContent="center" className="caixa-sobre">
 
-            <Grid alignItems="center" item xs={12} sm={12} className="imagem-manifesto py-box">
+            <Grid alignItems="center" item xs={12} sm={12} className="imagem-manifesto">
 
                     <Box m={3}>
                         <Typography variant="h5" component="h4" align="center" className="titulo-manifesto">Manifesto Dresscode</Typography>
@@ -61,21 +61,21 @@ function Sobre() {
             
             <Box border={1} className="card">
                 <Box justifyContent="center" display="flex">
-                    <img src="https://avatars.githubusercontent.com/u/82973647?v=4" alt="" className="card-img" />
+                    <img src="https://media.discordapp.net/attachments/900887742836248667/920714442545705000/20211215_133010.jpg?width=492&height=492" alt="" className="card-img" />
                 </Box>
                 <Typography variant="h6" component="h5" align="center" gutterBottom className="nome-autor">
                     Maiury Sousa
                 </Typography>
                 <Typography variant="body2" component="p" align="center" className="pitch-autor">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium, voluptas corporis
-                    ipsa libero laudantium quas ad ut laborum adipisci dolorem, qui nihil! Odit necessitatibus
-                    blanditiis expedita itaque aliquam temporibus officia?
+                    Formada em Artes Visuais, me encontro hoje em uma transição de carreira tendo participado
+                    do Bootcamp da Generation Brasil que teve como foco o desenvolvimento web com o uso das linguagens:
+                    Java para back-end e React para front-end, além de desenvolver minhas Soft Skills.
                 </Typography>
                 <Box display="flex" justifyContent="center">
-                    <a href="https://www.instagram.com/generationbrasil/" target="_blank">
+                    <a href="https://github.com/maiurysousa" target="_blank">
                         <GitHubIcon className="github" />
                     </a>
-                    <a href="https://www.linkedin.com/school/generationbrasil/" target="_blank">
+                    <a href="https://www.linkedin.com/in/maiury-sousa/" target="_blank">
                         <LinkedInIcon className="in" />
                     </a>
                 </Box>
@@ -89,9 +89,10 @@ function Sobre() {
                     Wesley Gomes
                 </Typography>
                 <Typography variant="body2" component="p" align="center" className="pitch-autor">
-                    Buscando sempre manter a boa comunicação em relações e em seus codigos, o compromisso
-                    com a resolução de problemas é constante. Mantendo a atenção aos detalhes e o bom ambiente
-                    esse profissional busca o desenvolvimento continuo!
+                    Graduado em Administração, hoje estou em uma transição de carreira tendo participado do
+                    Bootcamp da Generation Brasil, houve o foco no desenvolvimento web utilizando de linguagens como:
+                    Java para back-end e React para front-end, além disso, minhas Soft Skills também foram desenvolvidas,
+                    principalmente a comunicação, traço muito importante de minha personalidade.
                 </Typography>
                 <Box display="flex" justifyContent="center">
                     <a href="https://www.instagram.com/generationbrasil/" target="_blank">
@@ -108,7 +109,7 @@ function Sobre() {
                     <img src="https://avatars.githubusercontent.com/u/83739100?v=4" alt="" className="card-img" />
                 </Box>
                 <Typography variant="h6" component="h5" align="center" gutterBottom className="nome-autor">
-                    Maiury Sousa
+                    Felipe de Sales
                 </Typography>
                 <Typography variant="body2" component="p" align="center" className="pitch-autor">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium, voluptas corporis
@@ -127,10 +128,10 @@ function Sobre() {
 
             <Box border={1} className="card">
                 <Box justifyContent="center" display="flex">
-                    <img src="https://avatars.githubusercontent.com/u/82973647?v=4" alt="" className="card-img" />
+                    <img src="https://avatars.githubusercontent.com/u/83739100?v=4" alt="" className="card-img" />
                 </Box>
                 <Typography variant="h6" component="h5" align="center" gutterBottom className="nome-autor">
-                    Maiury Sousa
+                    Glauber Torres
                 </Typography>
                 <Typography variant="body2" component="p" align="center" className="pitch-autor">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium, voluptas corporis
@@ -138,10 +139,10 @@ function Sobre() {
                     blanditiis expedita itaque aliquam temporibus officia?
                 </Typography>
                 <Box display="flex" justifyContent="center">
-                    <a href="https://www.instagram.com/generationbrasil/" target="_blank">
+                    <a href="https://github.com/glaubertorres" target="_blank">
                         <GitHubIcon className="github" />
                     </a>
-                    <a href="https://www.linkedin.com/school/generationbrasil/" target="_blank">
+                    <a href="https://www.linkedin.com/in/glauberttorres/" target="_blank">
                         <LinkedInIcon className="in" />
                     </a>
                 </Box>
@@ -149,21 +150,22 @@ function Sobre() {
 
             <Box border={1} className="card">
                 <Box justifyContent="center" display="flex">
-                    <img src="https://avatars.githubusercontent.com/u/82973647?v=4" alt="" className="card-img" />
+                    <img src="https://media.discordapp.net/attachments/900887742836248667/920731816007192586/20211215_143845.jpg?width=411&height=492" alt="" className="card-img" />
                 </Box>
                 <Typography variant="h6" component="h5" align="center" gutterBottom className="nome-autor">
-                    Maiury Sousa
+                    Darcy Oliveira
                 </Typography>
                 <Typography variant="body2" component="p" align="center" className="pitch-autor">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium, voluptas corporis
-                    ipsa libero laudantium quas ad ut laborum adipisci dolorem, qui nihil! Odit necessitatibus
-                    blanditiis expedita itaque aliquam temporibus officia?
+                    Uma desenvolvedora em constante evolução que largou o Design de Interiores para se aventurar
+                    no mundo dos códigos. Formada pela Generation Brasil com as principais tecnologias em Java
+                    para Back end e React para Front end, a famosa desenvolvedora fullstack java jr,
+                    prazer eu sou a Darcy.
                 </Typography>
                 <Box display="flex" justifyContent="center">
-                    <a href="https://www.instagram.com/generationbrasil/" target="_blank">
+                    <a href="https://github.com/DarcyOliveira" target="_blank">
                         <GitHubIcon className="github" />
                     </a>
-                    <a href="https://www.linkedin.com/school/generationbrasil/" target="_blank">
+                    <a href="https://www.linkedin.com/in/darcyelleoliveira/" target="_blank">
                         <LinkedInIcon className="in" />
                     </a>
                 </Box>
@@ -171,10 +173,10 @@ function Sobre() {
 
             <Box border={1} className="card">
                 <Box justifyContent="center" display="flex">
-                    <img src="https://avatars.githubusercontent.com/u/82973647?v=4" alt="" className="card-img" />
+                    <img src="https://images-ext-1.discordapp.net/external/xDaP93_w_bM4We3tY4pNWpkHwySJ9N8KB9Xtz7sexgI/https/lh3.googleusercontent.com/Z1eAveTDwYbOq-8IROFkJvs9bP7g5YSij7qbodis-yS_S9Y5mBTnhHecPRZu0V-8QnDeqt46wgX50LvDgf7bxndFCZkaxPX2JOPrKnAEpuASJislTmnogicqwvLaHMluztvm7wO7ejk%3Dw600-h315-p-k" alt="" className="card-img" />
                 </Box>
                 <Typography variant="h6" component="h5" align="center" gutterBottom className="nome-autor">
-                    Maiury Sousa
+                    André Santos
                 </Typography>
                 <Typography variant="body2" component="p" align="center" className="pitch-autor">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium, voluptas corporis
@@ -182,10 +184,10 @@ function Sobre() {
                     blanditiis expedita itaque aliquam temporibus officia?
                 </Typography>
                 <Box display="flex" justifyContent="center">
-                    <a href="https://www.instagram.com/generationbrasil/" target="_blank">
+                    <a href="https://github.com/Dehzxg" target="_blank">
                         <GitHubIcon className="github" />
                     </a>
-                    <a href="https://www.linkedin.com/school/generationbrasil/" target="_blank">
+                    <a href="https://www.linkedin.com/in/andresantos610/" target="_blank">
                         <LinkedInIcon className="in" />
                     </a>
                 </Box>
